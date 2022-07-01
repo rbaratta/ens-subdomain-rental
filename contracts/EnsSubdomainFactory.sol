@@ -11,6 +11,10 @@ import './EnsResolver.sol';
 // ---------------------------------------------------------------------------------------------------
 
 /**
+	fork todo
+	- unlockBlockNumber
+
+
  * @title EnsSubdomainFactory
  * @dev Allows to create and configure a subdomain for Ethereum ENS in one call.
  * After deploying this contract, change the owner of the domain you want to use
@@ -29,6 +33,7 @@ contract EnsSubdomainFactory {
 	event RegistryUpdated(address indexed previousRegistry, address indexed newRegistry);
 	event ResolverUpdated(address indexed previousResolver, address indexed newResolver);
 	event DomainTransfersLocked();
+	event DomainTransfersUnlocked(); 
 
 	constructor(EnsRegistry _registry, EnsResolver _resolver) public {
 		owner = msg.sender;
